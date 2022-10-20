@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Abonnement Newsletter</h1>
+    </header>
+    <main>
+        <form action="index.php" method="POST">
+            <fieldset>
+                <legend>Abonnez-vous à notre newsletter pour rester informé</legend>
+                <div>
+                    <label for="email" <?=isset($error)?'class="error"':'';?>>Email</label>
+                    <input type="text" id="email" name="email" value="<?=$email;?>" <?=isset($error)?'class="error"':'';?>>
+
+                    <!-- Affichage du message d'erreur le cas échéant -->
+                    <?php if (isset($error)) { ?>
+                        <p class="error"><?=$error;?></p>
+                    <?php } ?>
+                </div>
+                <input type="submit" value="Valider">
+            </fieldset>
+        </form>        
+    </main>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.logo{
+    margin-right: 45px;
+    width: 45px;
+    height: 45px;
+}
+.Accueil{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: blueviolet;
+}
+.image{
+    margin: 50px auto;
+    margin-left: 35%;
+    width: 600px;
+    height: 400px;
+}
+form{
+    margin-left: 50px;
+}
+form label{
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+form input{
+    padding-bottom: 10px;
+}
+.Form {
+    min-height: calc(100vh - 62px);
+    background-image: url(/test1/test1/test/bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 764px;
+    background-color: #848eb6;
+}
+.form-control{
+    width: 90%;
+    margin: auto;
+    background-color: #848eb6;
+}

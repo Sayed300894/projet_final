@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="head">Formulaire</h1>
+    </header>
+    <form action="formulaire.php" method="POST" id="tableau">
+        <label for="lastname">NOM</label><br>
+        <input type="text" id="lastname" name="lastname" value="<?=$lastname;?>"><br>
+        <?php if(isset($errors['lastname'])) { ?>
+            <p class="error"><?=$errors['lastname'];?></p>
+       <?php } ?>
+
+       <label for="firstname">Prénom</label><br>
+       <input type="text" id="firstname" name="firstname" value="<?=$firstname;?>"><br>
+       <?php if(isset($errors['firstname'])) {?>
+        <p class="error"><?=$errors['firstname'];?></p>
+     <?php  }?>
+     <label for="email">E-mail</label><br>
+     <input type="email" id="email" name="email" value="<?=$email;?>"><br>
+     <?php if(isset($errors['email'])) {?>
+        <p class="error"><?=$errors['email'];?></p>
+     <?php } ?>
+        <input type="submit" value="Valider">
+
+    </form>
+</body>
+</html>

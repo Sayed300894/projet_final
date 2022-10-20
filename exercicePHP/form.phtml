@@ -1,0 +1,45 @@
+<!-- <?php
+    $tableau = array("nom" => "toto", "prénom" => "titi", "age" => 18, "email" => "titi@gmail.com");
+    foreach ($tableau as $key => $value){
+        echo '<p>'. $key .' : '. $value.'</p>';
+    }
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+
+    </p>
+    <form action="tableau.php" method ='POST'>
+        <label for="nom">Nom</label><br>
+        <input type="text" name ="nom" id ='nom'><br>
+        <label for="prenom">Prénom</label><br>
+        <input type="text" name = "prenom" id ='prénom'><br>
+        <label for="date">Date de naissance</label><br>
+        <input type="date" name ="date" id ='date'><br>
+        <label for="email" >Email</label><br>
+        <input type="email" name = "email" id = 'email'  value="<?=$email;?>" <?=isset($error)?'class="error"':'';?>><br>
+        <input type="submit" value = 'envoyer'>
+    </form>
+  <?php  if(isset($prenom)){?>
+    <p><?php echo($prenom)?></p>
+    <?php  } ?>
+  <?php  if(isset($date)){?>
+    <p><?php echo($date)?></p>
+    <?php  } ?>
+    <?php
+    if(isset($message)){?>
+    <p><?php echo($message)?></p>
+    <?php  } ?>
+    <?php if (isset($error)) { ?>
+    <p class="error"><?=$error;?></p>
+    <?php } ?>
+</body>
+</html>
